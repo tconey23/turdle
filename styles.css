@@ -102,17 +102,26 @@ button {
   border: none;
   padding: 5px;
   font-size: 20px;
+  &:hover{
+    background-color: #599641;
+    color: black;
+    cursor: pointer;
+  }
 }
 
 .inline {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 50px;
 }
 
 #error-message {
   font-size: 16px;
-  font-weight: normal;
+    font-weight: normal;
+    height: 20px;
+    padding-top: 10px;
 }
 
 /* NAV BUTTONS (right side) */
@@ -159,14 +168,39 @@ nav {
   padding: 25px;
   padding-top: 0;
   text-align: center;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  span {
+    border: black solid thin;
+    width: 30px;
+    height: 30px;
+    display: block;
+    &:hover {
+      mix-blend-mode: color;
+      cursor: pointer;
+    }
+  }
 }
 
 /* RULES & STATS & GAME OVER */
 
 #rules-section,
-#stats-section,
+#stats-section {
+  text-align: center;
+}
 #game-over-section {
   text-align: center;
+  position: absolute;
+  height: 349px;
+  left: 361px;
+  background: #000000b5;
+  box-shadow: 1px 0px 15px 7px #000000ba;
+  border-radius: 44px;
+  color: white;
+  padding-top: 75px;
 }
 
 h3 {
